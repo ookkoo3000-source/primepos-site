@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!-- ================================================================
+     블로그 글 템플릿 — 복사해서 새 파일(blog/키워드-슬러그.html)로 저장
+     바꿀 곳: {{TITLE}} {{DESC}} {{KEYWORDS}} {{SLUG}} {{DATE}} {{CRUMB}} 본문
+     저장 후: 1) blog/index.html 의 BLOG_GRID_START 아래에 카드 추가
+             2) sitemap.xml 에 URL 한 줄 추가
+     ================================================================ -->
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{{TITLE}} | 프라임포스</title>
+<meta name="description" content="{{DESC}}" />
+<meta name="keywords" content="{{KEYWORDS}}" />
+<link rel="canonical" href="https://pos.primeadmit.co.kr/blog/{{SLUG}}.html" />
+<meta name="robots" content="index,follow" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="프라임포스" />
+<meta property="og:title" content="{{TITLE}}" />
+<meta property="og:description" content="{{DESC}}" />
+<meta property="og:url" content="https://pos.primeadmit.co.kr/blog/{{SLUG}}.html" />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+<link rel="stylesheet" href="../assets/style.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{TITLE}}",
+  "datePublished": "{{DATE}}",
+  "dateModified": "{{DATE}}",
+  "author": { "@type": "Organization", "name": "프라임포스" },
+  "publisher": { "@type": "Organization", "name": "프라임포스" },
+  "mainEntityOfPage": "https://pos.primeadmit.co.kr/blog/{{SLUG}}.html"
+}
+</script>
+</head>
+<body>
+
+<div class="promobar"><span>💡 구입 · 렌탈 · 중고 <b>세 가지 비용을 한 번에 비교</b> · 견적 신청 당일 회신</span></div>
+
+<header class="top" id="top">
+  <div class="wrap top-in">
+    <a class="logo" href="../" aria-label="프라임포스 홈">
+      <span class="logo-mark" aria-hidden="true">P</span>
+      <span class="logo-text">프라임포스<small>PRIMEPOS</small></span>
+    </a>
+    <nav class="nav" aria-label="주요 메뉴">
+      <a href="../#finder">장비 진단</a>
+      <a href="../#catalog">카탈로그</a>
+      <a href="../#calc">비용 계산</a>
+      <a href="../#sets">업종별 세트</a>
+      <a href="./">블로그</a>
+      <a href="../#faq">FAQ</a>
+    </nav>
+    <div class="top-cta">
+      <a class="tel" href="tel:01031315305">010-3131-5305</a>
+      <a class="btn btn-accent" href="../#quote">견적 받기</a>
+    </div>
+    <button class="ham" id="ham" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mnav" id="mnav">
+    <a href="../#finder">장비 진단</a>
+    <a href="../#catalog">카탈로그</a>
+    <a href="../#calc">비용 계산</a>
+    <a href="../#sets">업종별 세트</a>
+    <a href="./">블로그</a>
+    <a href="../#faq">FAQ</a>
+    <a href="../#quote" class="mnav-cta">견적 받기</a>
+  </div>
+</header>
+
+<main>
+<section class="art-hero">
+  <div class="wrap">
+    <div class="crumb"><a href="../">홈</a> <span>›</span> <a href="./">블로그</a> <span>›</span> <span>{{CRUMB}}</span></div>
+    <h1>{{TITLE}}</h1>
+    <p class="art-meta"><b>{{DATE}}</b> · 비교 가이드</p>
+  </div>
+</section>
+
+<article class="art">
+  <div class="prose">
+    <p>여기에 서론(300자 이상). 첫 문단은 자동으로 크게 표시됩니다.</p>
+
+    <h2>소제목 1</h2>
+    <p>본문 2~3개 문단으로 나눠서 작성. <strong>중요한 문장은 강조.</strong></p>
+    <p>두 번째 문단.</p>
+
+    <h2>소제목 2</h2>
+    <p>...</p>
+    <ul><li>목록 항목</li><li>목록 항목</li></ul>
+
+    <div class="callout">핵심 요약은 이 박스에.</div>
+
+    <h2 class="prose-faq">자주 묻는 질문</h2>
+    <div class="faq">
+      <details open><summary>질문 1</summary><p>답변.</p></details>
+      <details><summary>질문 2</summary><p>답변.</p></details>
+      <details><summary>질문 3</summary><p>답변.</p></details>
+    </div>
+  </div>
+
+  <div class="post-cta">
+    <h2>우리 매장 견적이 궁금하다면</h2>
+    <p>업종·규모만 알려 주시면 렌탈·구입·중고 세 가지로 견적서를 만들어 드립니다.</p>
+    <a class="tel-big" href="tel:01031315305">010-3131-5305</a>
+    <a class="btn btn-accent btn-lg" href="../#quote">무료 견적 신청</a>
+  </div>
+
+  <a class="post-back" href="./">블로그 목록으로</a>
+</article>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <p class="foot-brand">프라임포스 <small>PRIMEPOS</small></p>
+      <p>포스기 · 카드단말기 · 키오스크 · 테이블오더 · 무인자판기 비교 견적 및 설치 · 교체 · 철거</p>
+      <p>상담 010-3131-5305 · 09:00–21:00 연중무휴</p>
+    </div>
+    <nav class="foot-nav" aria-label="바닥 메뉴">
+      <a href="../#finder">장비 진단</a>
+      <a href="../#catalog">카탈로그</a>
+      <a href="../#calc">비용 계산</a>
+      <a href="../#sets">업종별 세트</a>
+      <a href="./">블로그</a>
+      <a href="../#quote">견적 신청</a>
+    </nav>
+  </div>
+  <p class="foot-copy">© <span id="year"></span> 프라임포스. 페이지의 금액은 참고용 예시이며 실제 견적과 다를 수 있습니다.</p>
+</footer>
+
+<div class="mbar" aria-label="빠른 연락">
+  <a href="tel:01031315305">전화</a>
+  <a href="sms:01031315305">문자</a>
+  <a href="../#quote" class="mbar-main">견적 받기</a>
+</div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  const ham=document.getElementById("ham"),mnav=document.getElementById("mnav");
+  ham.addEventListener("click",()=>{const o=mnav.classList.toggle("is-open");ham.classList.toggle("is-open",o);ham.setAttribute("aria-expanded",String(o));});
+  const tb=document.getElementById("top");addEventListener("scroll",()=>tb.classList.toggle("is-scrolled",scrollY>10),{passive:true});
+</script>
+</body>
+</html>
